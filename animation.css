@@ -1,0 +1,39 @@
+body  a {
+    transition:transform 0.3s ease-in-out;
+}
+body a:hover{
+    transform: scale(1.1);
+}
+.image-logo{
+    transition:transform 0.3s ease-in-out;
+}
+.image-logo:hover{
+    transform: scale(1.1);
+}
+/* Button Hover and Click Animations */
+
+/* General button animation */
+button,
+.resume-btn,
+.lgbutton,
+.signup {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+button:hover,
+.resume-btn:hover,
+.lgbutton:hover,
+.signup:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+/* Click/Active effect */
+button:active,
+.resume-btn:active,
+.lgbutton:active,
+.signup:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}

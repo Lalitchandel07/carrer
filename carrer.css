@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    left: 0%;
+    top: 0%;
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    z-index: 1000;
+}
+
+.image-logo {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.logo {
+    color: #ffffff;
+    background: transparent;
+    font-size: 16px;
+    padding: 15px 40px;
+    margin: 5px 10px 0px 0px;
+    text-decoration: none;
+}
+
+.job,
+.companies,
+.services {
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px 10px 0px 0px;
+}
+.lgbutton {
+    width: 70px;
+    height: 40px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 15%;
+    opacity: 0.9;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    background-color: #fac800; /* Bright cyan (Old color) */
+}
+
+.signup {
+    width: 70px;
+    height: 40px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 15%;
+    opacity: 0.9;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    background-color: #d326fa; /* A slightly lighter cyan (Old color) */
+}
+
+.jobtable,
+.companytable,
+.servicetable {
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+}
+
+.job:hover .jobtable,
+.companies:hover .companytable,
+.services:hover .servicetable {
+    text-align: center;
+    margin-top: 40px;
+    display: block;
+    background-color: rgba(127, 255, 212, 0.64);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.container1 {
+    font-size: larger;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.src {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.srcbox,
+.category {
+    font-size: 20px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.srcbox {
+    background-color: rgba(0, 255, 255, 0.3); /* Subtle cyan */
+    width: 290px;
+}
+
+.category {
+    background-color: rgba(0, 255, 255, 0.3); /* Subtle cyan */
+    width: 180px;
+}
+.category::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.srcbox::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.aibox {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    background: linear-gradient(rgba(1, 1, 53, 0.575), rgb(5, 96, 124));
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    height: 7cm;
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+}
+
+.aibox h1,
+.aibox p {
+    background: transparent !important;
+}
+
+.aibox p {
+    text-align: left;
+    color: white;
+    margin: auto;
+    padding: 14px 0;
+    text-shadow: none;
+    line-height: 1.7;
+    word-spacing: 1.2;
+}
+
+.aibox button {
+    font-size: larger;
+    position: inherit;
+    background-color: rgba(0, 255, 255, 0.986);
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 15px;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .6;
+}
+
+footer {
+    margin-top: auto;
+    background: transparent;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  }
+  
+  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .footer .links a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, rgb(22, 53, 82), rgb(0, 19, 120));
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-shadow: none;
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+    font-size: 10px;
+  }
+.links a {
+    padding: 10px 26px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.ads {
+    width: 100%;
+    height: 10cm;
+    overflow: hidden;
+    position: relative;
+    background: black;
+}
+
+.ads-slider {
+    width: 100%;
+    height: 10cm;
+    overflow: hidden;
+    position: relative;
+}
+
+.ads-track {
+    display: flex;
+    width: calc(1 * 100%);
+    animation: slideAds 10s linear infinite;
+}
+
+.ad-image {
+    width: 100%;
+    height:10cm;
+    object-fit:contain;
+    flex-shrink: 0;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: rgba(0, 255, 255, 0.6); /* Blending cyan */
+    color: black;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    opacity: 0.9;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: rgba(0, 255, 255, 0.8); /* Slight hover effect */
+}
+
+/* Feature: Daily Tip */
+#dailyTip {
+    color: white;
+    background-color: rgba(0, 255, 255, 0.2);
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px aqua;
+}
+
+/* Feature: Feedback Box */
+.feedback-box {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(0, 255, 255, 0.1);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px cyan;
+}
+
+.feedback-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #000000;
+    color: white;
+    margin-top: 10px;
+}
+
+.feedback-box button {
+    background-color: cyan;
+    color: black;
+    padding: 5px 15px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Feature: Resume Builder Button */
+.resume-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ffff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Keyframes */
+@keyframes slideAds {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-500%); }
+}
